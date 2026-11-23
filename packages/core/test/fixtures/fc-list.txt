@@ -1,0 +1,21 @@
+Avenir Next	Ultra Light Italic	Avenir Next Ultra Light Italic	AvenirNext-UltraLightItalic	47.5	100	/System/Library/Fonts/Avenir Next.ttc
+Avenir Next	Bold Italic	Avenir Next Bold Italic	AvenirNext-BoldItalic	200	100	/System/Library/Fonts/Avenir Next.ttc
+Avenir Next	Demi Bold Italic	Avenir Next Demi Bold Italic	AvenirNext-DemiBoldItalic	180	100	/System/Library/Fonts/Avenir Next.ttc
+Avenir Next	Heavy	Avenir Next Heavy	AvenirNext-Heavy	210	0	/System/Library/Fonts/Avenir Next.ttc
+Avenir Next	Medium Italic	Avenir Next Medium Italic	AvenirNext-MediumItalic	100	100	/System/Library/Fonts/Avenir Next.ttc
+Avenir Next	Demi Bold	Avenir Next Demi Bold	AvenirNext-DemiBold	180	0	/System/Library/Fonts/Avenir Next.ttc
+Rockwell	Bold Italic	Rockwell Bold Italic	Rockwell-BoldItalic	200	100	/System/Library/Fonts/Supplemental/Rockwell.ttc
+Avenir Next	Heavy Italic	Avenir Next Heavy Italic	AvenirNext-HeavyItalic	210	100	/System/Library/Fonts/Avenir Next.ttc
+Avenir Next	Bold	Avenir Next Bold	AvenirNext-Bold	200	0	/System/Library/Fonts/Avenir Next.ttc
+Rockwell	Bold	Rockwell-Bold	Rockwell-Bold	200	0	/System/Library/Fonts/Supplemental/Rockwell.ttc
+Rockwell	Regular	Rockwell	Rockwell-Regular	80	0	/System/Library/Fonts/Supplemental/Rockwell.ttc
+Avenir Next	Medium	Avenir Next Medium	AvenirNext-Medium	100	0	/System/Library/Fonts/Avenir Next.ttc
+Avenir Next	Regular	Avenir Next Regular	AvenirNext-Regular	80	0	/System/Library/Fonts/Avenir Next.ttc
+Impact	Standard	Impact	Impact	80	0	/System/Library/Fonts/Supplemental/Impact.ttf
+Avenir Next	Ultra Light	AvenirNext-UltraLight	AvenirNext-UltraLight	47.5	0	/System/Library/Fonts/Avenir Next.ttc
+Rockwell	Italic	Rockwell Italic	Rockwell-Italic	80	100	/System/Library/Fonts/Supplemental/Rockwell.ttc
+Avenir Next	Italic	Avenir Next Italic	AvenirNext-Italic	80	100	/System/Library/Fonts/Avenir Next.ttc
+kaputte Zeile ohne Tabs
+.SF NS	Regular	.SF NS	.SFNS-Regular	80	0	/System/Library/Fonts/SFNS.ttf
+Curly Font	Regular	Curly Font	Curly.Font{x}	80	0	/Users/x/Library/Fonts/curly.ttf
+Georgia	Fett	Georgia Fett	Georgia-Bold	200	0	/System/Library/Fonts/Supplemental/Georgia Bold.ttf	Georgia Fett,Georgia Bold,Georgia Negreta	de,en,ca

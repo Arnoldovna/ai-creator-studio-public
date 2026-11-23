@@ -1,0 +1,30 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+dist/
+*.mp4
+*.mov
+*.webm
+*.png
+*.jpg
+*.jpeg
+*.webp
+.DS_Store
+# Local development credentials and tool settings
+.mcp.json
+.claude/settings.local.json
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+# App data & test output
+.data/
+apps/web/.data/
+test-results/
+playwright-report/
+*.tsbuildinfo
+next-env.d.ts
+.taste-skill/

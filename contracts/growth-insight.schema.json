@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "title": "Growth Insight v1",
+  "type": "object",
+  "required": [
+    "hypothesis",
+    "observations",
+    "limitations",
+    "experiment"
+  ],
+  "properties": {
+    "hypothesis": {
+      "type": "string"
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "experiment": {
+      "type": "object",
+      "required": [
+        "change",
+        "metric",
+        "timeWindow"
+      ],
+      "properties": {
+        "change": {
+          "type": "string"
+        },
+        "metric": {
+          "type": "string"
+        },
+        "timeWindow": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "approved": {
+      "type": "boolean"
+    }
+  }
+}

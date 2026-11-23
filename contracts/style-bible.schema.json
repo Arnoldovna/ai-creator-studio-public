@@ -1,0 +1,520 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "title": "Style Bible v1 (+ optional design system, Etappe 14)",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "visual",
+    "motion",
+    "voice",
+    "approvedReferenceIds"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "approvedReferenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "visual": {
+      "type": "object",
+      "required": [
+        "palette",
+        "traits",
+        "avoid"
+      ],
+      "properties": {
+        "palette": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^#[0-9A-Fa-f]{6}$"
+          }
+        },
+        "traits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "avoid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "typography": {
+          "type": "string"
+        },
+        "lighting": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "motion": {
+      "type": "object",
+      "required": [
+        "pacing",
+        "transitions"
+      ],
+      "properties": {
+        "pacing": {
+          "type": "string"
+        },
+        "transitions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "voice": {
+      "type": "object",
+      "required": [
+        "traits",
+        "avoid"
+      ],
+      "properties": {
+        "traits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "avoid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ownExamples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "design": {
+      "type": "object",
+      "description": "„Meine Marke“: optional and additive (absent = legacy version, palette[0] accent / palette[1] surface).",
+      "required": [
+        "colors",
+        "typography",
+        "presets",
+        "defaultPresetId"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "colors": {
+          "type": "object",
+          "required": [
+            "primary",
+            "accent",
+            "surface",
+            "onSurface",
+            "onAccent",
+            "onVideo",
+            "background"
+          ],
+          "properties": {
+            "primary": {
+              "$ref": "#/$defs/colorToken"
+            },
+            "accent": {
+              "$ref": "#/$defs/colorToken"
+            },
+            "surface": {
+              "$ref": "#/$defs/colorToken"
+            },
+            "onSurface": {
+              "$ref": "#/$defs/colorToken"
+            },
+            "onAccent": {
+              "$ref": "#/$defs/colorToken"
+            },
+            "onVideo": {
+              "$ref": "#/$defs/colorToken"
+            },
+            "background": {
+              "$ref": "#/$defs/colorToken"
+            }
+          },
+          "additionalProperties": false
+        },
+        "typography": {
+          "type": "object",
+          "required": [
+            "hook",
+            "lowerThird",
+            "keyword",
+            "subtitle",
+            "carouselTitle",
+            "carouselBody"
+          ],
+          "properties": {
+            "hook": {
+              "$ref": "#/$defs/typeToken"
+            },
+            "lowerThird": {
+              "$ref": "#/$defs/typeToken"
+            },
+            "keyword": {
+              "$ref": "#/$defs/typeToken"
+            },
+            "subtitle": {
+              "$ref": "#/$defs/typeToken"
+            },
+            "carouselTitle": {
+              "$ref": "#/$defs/typeToken"
+            },
+            "carouselBody": {
+              "$ref": "#/$defs/typeToken"
+            }
+          },
+          "additionalProperties": false
+        },
+        "presets": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]{1,40}$"
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 60
+              },
+              "hook": {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "enum": [
+                      "box",
+                      "outline"
+                    ]
+                  },
+                  "fill": {
+                    "$ref": "#/$defs/colorRole"
+                  },
+                  "text": {
+                    "$ref": "#/$defs/colorRole"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "lowerThird": {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "enum": [
+                      "stripe",
+                      "box",
+                      "outline"
+                    ]
+                  },
+                  "fill": {
+                    "$ref": "#/$defs/colorRole"
+                  },
+                  "stripe": {
+                    "$ref": "#/$defs/colorRole"
+                  },
+                  "text": {
+                    "$ref": "#/$defs/colorRole"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "keyword": {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "enum": [
+                      "box",
+                      "outline"
+                    ]
+                  },
+                  "fill": {
+                    "$ref": "#/$defs/colorRole"
+                  },
+                  "text": {
+                    "$ref": "#/$defs/colorRole"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "graphic": {
+                "$ref": "#/$defs/colorRole"
+              },
+              "hookSlot": {
+                "$ref": "#/$defs/slot"
+              },
+              "overlaySlot": {
+                "$ref": "#/$defs/slot"
+              },
+              "animation": {
+                "enum": [
+                  "fade",
+                  "none"
+                ]
+              },
+              "origin": {
+                "$ref": "#/$defs/provenance"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "defaultPresetId": {
+          "type": "string"
+        },
+        "motion": {
+          "type": "object",
+          "properties": {
+            "targetCutSec": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0.5,
+              "maximum": 15
+            },
+            "transitions": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "hard_cut",
+                  "soft_cut",
+                  "punch_in"
+                ]
+              },
+              "maxItems": 3
+            },
+            "zoom": {
+              "enum": [
+                "none",
+                "push_in",
+                "push_out",
+                "punch_in"
+              ]
+            },
+            "tempo": {
+              "enum": [
+                "calm",
+                "medium",
+                "fast"
+              ]
+            },
+            "origin": {
+              "$ref": "#/$defs/provenance"
+            }
+          },
+          "additionalProperties": false
+        },
+        "imagery": {
+          "type": "object",
+          "properties": {
+            "keywords": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "maxItems": 20
+            },
+            "light": {
+              "type": "string",
+              "maxLength": 600
+            },
+            "temperature": {
+              "enum": [
+                "warm",
+                "neutral",
+                "cool",
+                "mixed",
+                null
+              ]
+            },
+            "referenceIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 24
+            },
+            "origin": {
+              "$ref": "#/$defs/provenance"
+            }
+          },
+          "additionalProperties": false
+        },
+        "phrases": {
+          "type": "array",
+          "maxItems": 40,
+          "items": {
+            "type": "object",
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "origin": {
+                "$ref": "#/$defs/provenance"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "guidelines": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "guidelinesOrigin": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "required": [
+        "source"
+      ],
+      "properties": {
+        "source": {
+          "enum": [
+            "manual",
+            "palette",
+            "observation",
+            "reference",
+            "voice",
+            "derived",
+            "ai",
+            "legacy"
+          ]
+        },
+        "observationIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20
+        },
+        "referenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 24
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "additionalProperties": false
+    },
+    "colorToken": {
+      "type": "object",
+      "required": [
+        "hex"
+      ],
+      "properties": {
+        "hex": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "origin": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "additionalProperties": false
+    },
+    "typeToken": {
+      "type": "object",
+      "required": [
+        "font"
+      ],
+      "properties": {
+        "font": {
+          "type": "string",
+          "description": "System font (Avenir Next, Helvetica Neue, Futura, Georgia, DIN Condensed, Arial) or custom:<id> of an uploaded font",
+          "pattern": "^(Avenir Next|Helvetica Neue|Futura|Georgia|DIN Condensed|Arial|custom:[A-Za-z0-9-]{1,64})$"
+        },
+        "weight": {
+          "enum": [
+            "regular",
+            "bold"
+          ]
+        },
+        "size": {
+          "enum": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        "textCase": {
+          "enum": [
+            "none",
+            "upper",
+            "lower"
+          ]
+        },
+        "origin": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "additionalProperties": false
+    },
+    "colorRole": {
+      "enum": [
+        "primary",
+        "accent",
+        "surface",
+        "onSurface",
+        "onAccent",
+        "onVideo",
+        "background"
+      ]
+    },
+    "slot": {
+      "enum": [
+        "upper",
+        "center",
+        "lower"
+      ]
+    }
+  }
+}

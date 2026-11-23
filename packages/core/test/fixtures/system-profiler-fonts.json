@@ -1,0 +1,7 @@
+{"SPFontsDataType":[{"_name":"Rockwell.ttc","enabled":"yes","path":"/System/Library/Fonts/Supplemental/Rockwell.ttc","typefaces":[
+ {"_name":"Rockwell-Bold","family":"Rockwell","fullname":"Rockwell Bold","style":"Fett","enabled":"yes"},
+ {"_name":"Rockwell-Italic","family":"Rockwell","fullname":"Rockwell Italic","style":"Kursiv","enabled":"yes"},
+ {"_name":"Rockwell-Regular","family":"Rockwell","fullname":"Rockwell","style":"Standard","enabled":"yes"}]},
+ {"_name":"Hidden.ttf","typefaces":[{"_name":".Hidden-Regular","family":".Hidden","fullname":".Hidden","style":"Regular"}]},
+ {"_name":"Off.ttf","typefaces":[{"_name":"Off-Regular","family":"Off","fullname":"Off","style":"Regular","enabled":"no"}]}
+]}

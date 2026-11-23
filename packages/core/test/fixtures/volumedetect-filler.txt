@@ -1,0 +1,7 @@
+[Parsed_volumedetect_0 @ 0x7fab4ba0b540] n_samples: 0
+[Parsed_volumedetect_0 @ 0x7fab4b804580] n_samples: 177928
+[Parsed_volumedetect_0 @ 0x7fab4b804580] mean_volume: -18.5 dB
+[Parsed_volumedetect_0 @ 0x7fab4b804580] max_volume: -0.9 dB
+[Parsed_volumedetect_0 @ 0x7fab4b804580] histogram_0db: 3
+[Parsed_volumedetect_0 @ 0x7fab4b804580] histogram_1db: 64
+[Parsed_volumedetect_0 @ 0x7fab4b804580] histogram_2db: 178

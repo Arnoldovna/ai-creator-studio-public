@@ -1,0 +1,61 @@
+{
+  "name": "@studio/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./palette": "./src/palette.ts",
+    "./text": "./src/text.ts",
+    "./analytics": "./src/analytics.ts",
+    "./schemas": "./src/schemas.ts",
+    "./router": "./src/router/index.ts",
+    "./directors": "./src/agents/directors.ts",
+    "./insights": "./src/agents/insightAgents.ts",
+    "./media": "./src/media.ts",
+    "./edit": "./src/edit.ts",
+    "./timeline": "./src/timeline.ts",
+    "./timelineView": "./src/timelineView.ts",
+    "./derived": "./src/derived.ts",
+    "./transcript": "./src/transcript.ts",
+    "./cuts": "./src/cuts.ts",
+    "./overlays": "./src/overlays.ts",
+    "./overlayLayout": "./src/overlayLayout.ts",
+    "./designSystem": "./src/designSystem.ts",
+    "./lookBase": "./src/lookBase.ts",
+    "./higgsfield": "./src/higgsfield.ts",
+    "./strategy": "./src/strategy.ts",
+    "./strategyLint": "./src/strategyLint.ts",
+    "./contextDoc": "./src/contextDoc.ts",
+    "./slopLint": "./src/slopLint.ts",
+    "./studioChat": "./src/agents/studioChat.ts",
+    "./imageLayer": "./src/imageLayer.ts",
+    "./story": "./src/story.ts",
+    "./finish": "./src/finish.ts",
+    "./textAnim": "./src/textAnim.ts",
+    "./fontCatalog": "./src/fontCatalog.ts",
+    "./carousel": "./src/carousel.ts",
+    "./igStory": "./src/igStory.ts",
+    "./week": "./src/week.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "@openrouter/ai-sdk-provider": "3.1.0",
+    "ai": "7.0.159",
+    "openai": "^7.57.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^26.6.6",
+    "eslint": "^9.39.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^5.1.0"
+  }
+}

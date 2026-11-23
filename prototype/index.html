@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101211" />
+  <title>AI Creator Studio · Creative DNA Prototype</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><div class="brandmark">✳</div><div><strong>CREATOR<span>STUDIO</span></strong><small>Creative Intelligence · v0.1</small></div></div>
+      <div class="side-label">WORKSPACE</div>
+      <nav aria-label="Hauptnavigation">
+        <button class="nav-item active" data-tab="references"><span>▧</span> Reference Lab</button>
+        <button class="nav-item" data-tab="style"><span>◈</span> Style & Voice</button>
+        <button class="nav-item" data-tab="content"><span>✎</span> Content Lab</button>
+        <button class="nav-item" data-tab="growth"><span>↗</span> Growth Loop</button>
+      </nav>
+      <div class="side-bottom">
+        <div class="info-box"><span class="online-dot"></span> LOCAL PROTOTYPE<br><small>Keine KI-API verbunden. Alles bleibt in diesem Browser.</small></div>
+        <button id="exportAll" class="button subtle full">↓ Daten als JSON exportieren</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><div class="breadcrumb">WORKSPACE <span>/</span> <strong id="breadcrumbCurrent">REFERENCE LAB</strong></div><div class="right-status"><span class="status-indicator"></span> Nur lokal gespeichert</div></header>
+      <div class="page-area">
+        <section id="tab-references" class="page-panel">
+          <div class="eyebrow">01 / LEARN YOUR AESTHETIC</div>
+          <div class="heading-row"><div><h1>Deine Referenzen.<br><em>Deine Handschrift.</em></h1><p class="lead">Sammle Fotos, Poster, Typografie, Video-Stills und Clips. Markiere selbst, was dir daran gefällt – daraus entsteht später deine Creative DNA.</p></div><div class="number" id="refCountBig">00 <span>REFERENZEN</span></div></div>
+          <div class="upload-zone" id="dropzone" tabindex="0" role="button" aria-label="Referenzdateien hochladen"><div class="upload-icon">+</div><div><strong>Bilder und Videos hier ablegen</strong><p>oder klicken, um Dateien auszuwählen · PNG, JPEG, WEBP, GIF, MP4, WEBM, MOV (max. 60 MB je Datei)</p></div><input id="referenceFiles" type="file" accept="image/png,image/jpeg,image/webp,image/gif,video/mp4,video/webm,video/quicktime" multiple hidden></div>
+          <div class="section-head"><h2>Reference Library</h2><span id="referenceCounter" class="pill">0 gespeicherte Referenzen</span></div>
+          <div id="referenceGrid" class="reference-grid"><div class="empty">Noch keine Referenzen. Lade ein paar visuelle Beispiele hoch – auch Screenshots und Designposter sind willkommen.</div></div>
+          <div id="referenceEditor" class="panel editor hidden">
+            <div class="panel-top"><h3>Referenz bewerten</h3><button type="button" id="closeEditor" class="button subtle small">Schließen ×</button></div>
+            <p class="hint" id="editingName"></p>
+            <label for="refNotes">Was gefällt dir oder was möchtest du NICHT übernehmen?</label><textarea id="refNotes" rows="3" placeholder="z. B. der mutige Typo-Kontrast, aber nicht die grellen Übergänge"></textarea>
+            <label for="refSource">Quelle / Credit (optional)</label><input id="refSource" placeholder="Link oder Urheber:in" />
+            <label for="refLikes">Mag ich · Merkmale (kommagetrennt)</label><input id="refLikes" placeholder="Editorial Typo, warme Schatten, Makroaufnahmen" />
+            <label for="refDislikes">Mag ich nicht · Anti-Patterns</label><input id="refDislikes" placeholder="überladene Untertitel, harte Neonfilter" />
+            <div class="button-row"><button type="button" id="saveReference" class="button primary">Merkmale speichern</button><button type="button" id="deleteReference" class="button danger">Referenz löschen</button></div>
+          </div>
+        </section>
+
+        <section id="tab-style" class="page-panel hidden">
+          <div class="eyebrow">02 / DEFINE YOUR CREATIVE DNA</div>
+          <h1>Eine visuelle Identität,<br><em>die nach dir aussieht.</em></h1>
+          <p class="lead">Hier werden deine eigenen Bewertungen zu einer vorläufigen Style Bible. Du entscheidest, welche Regeln tatsächlich gelten. Keine fremde Creator-Identität wird kopiert.</p>
+          <div class="two-cols">
+            <div class="panel">
+              <h2>Dein Style System</h2>
+              <label for="styleName">Name deiner Designsprache</label><input id="styleName" placeholder="z. B. Curious Editorial" />
+              <label for="styleTraits">Visuelle Leitbegriffe</label><textarea id="styleTraits" rows="3" placeholder="warm, grafisch, mutig, texturbetont ..."></textarea>
+              <label for="styleTypography">Typografischer Charakter</label><input id="styleTypography" placeholder="Editorial, klare große Headlines, viel Weißraum" />
+              <label for="styleMotion">Schnitt und Bewegung</label><input id="styleMotion" placeholder="Ruhige Beobachtung, überraschende harte Cuts" />
+              <label for="styleAvoid">Das vermeiden wir</label><textarea id="styleAvoid" rows="2" placeholder="Pseudo-Luxus, generische AI-Reels ..."></textarea>
+              <div class="note">Automatische Farben stammen aus einer groben Pixelstichprobe deiner Bilder. Das ist <strong>keine multimodale KI-Analyse</strong>.</div>
+              <button id="generateStyle" class="button primary full">✳ Style Bible aus Bewertungen erstellen</button>
+            </div>
+            <div class="panel">
+              <h2>Dein Voice Guide</h2>
+              <p class="hint">Benutze eigene Texte und Sprachbeispiele. Nicht die Persönlichkeit fremder Creators imitieren.</p>
+              <label for="voiceTraits">So klinge ich</label><textarea id="voiceTraits" rows="3" placeholder="neugierig, direkt, humorvoll, unperfekt ..."></textarea>
+              <label for="voiceAvoid">So möchte ich NICHT klingen</label><textarea id="voiceAvoid" rows="3" placeholder="Sales-Phrasen, künstliche Begeisterung, Clickbait ..."></textarea>
+              <label for="voiceExample">Ein eigenes Textbeispiel</label><textarea id="voiceExample" rows="4" placeholder="Ein paar eigene Sätze, wie du wirklich sprechen würdest ..."></textarea>
+              <button id="saveVoice" class="button subtle full">Voice Guide speichern</button>
+            </div>
+          </div>
+          <div class="panel style-preview"><div class="panel-top"><h2>Style Bible Vorschau</h2><button id="downloadBible" class="button subtle small">↓ JSON herunterladen</button></div><div id="styleOutput" class="output-placeholder">Erstelle zuerst deine Style Bible, um hier deine Farben, Motive und Regeln zu sehen.</div></div>
+        </section>
+
+        <section id="tab-content" class="page-panel hidden">
+          <div class="eyebrow">03 / STORY BEFORE VOLUME</div>
+          <h1>Content mit Konzept.<br><em>Nicht mit Zufall.</em></h1>
+          <p class="lead">Ein kleiner <strong>regelbasierter Demo-Generator</strong> zeigt bereits den Workflow: Briefing → drei Konzepte → Skript → Shotlist. Echte Agenten- und Vision-KI kommt in der nächsten Implementierungsphase.</p>
+          <div class="two-cols content-layout">
+            <div class="panel">
+              <h2>Creative Brief</h2>
+              <label for="contentMode">Projekttyp</label><select id="contentMode"><option value="personal">Mein Creator-Content</option><option value="ugc">UGC-Kundenprojekt</option></select>
+              <label for="contentTopic">Produkt oder Thema</label><input id="contentTopic" placeholder="z. B. meine Brother-Strickmaschine" />
+              <label for="contentAudience">Zielgruppe</label><input id="contentAudience" placeholder="z. B. Menschen, die Kreativität und Tech mögen" />
+              <label for="contentGoal">Ziel</label><select id="contentGoal"><option value="growth">Passende neue Follower gewinnen</option><option value="engagement">Community und Interaktion</option><option value="trust">Vertrauen und Persönlichkeit zeigen</option><option value="conversion">Produkt verständlich präsentieren</option></select>
+              <label for="contentFacts">Verifizierte Fakten / echte Erfahrung</label><textarea id="contentFacts" rows="3" placeholder="Was weißt du sicher? Welche eigene Erfahrung hast du tatsächlich gemacht?"></textarea>
+              <label for="contentLength">Videolänge</label><select id="contentLength"><option value="15">15 Sekunden</option><option value="30" selected>30 Sekunden</option><option value="45">45 Sekunden</option></select>
+              <button id="generateConcepts" class="button primary full">✳ Drei Konzepte vorbereiten</button>
+            </div>
+            <div class="panel"><h2>Was die KI später berücksichtigt</h2><div id="contentContext" class="context-list"></div><div class="divider"></div><h3>Growth-Feedback</h3><p id="growthContext" class="hint">Noch keine Analytics vorhanden. Neue Content-Tests werden zunächst ohne Performance-Hypothese erstellt.</p></div>
+          </div>
+          <div id="conceptsSection" class="hidden"><div class="section-head"><h2>Deine drei Konzepte</h2><span class="pill">Demo · ohne LLM</span></div><div id="conceptsGrid" class="concept-grid"></div></div>
+          <div id="scriptSection" class="panel hidden"><div class="panel-top"><h2>Skript & Shotlist</h2><button id="exportScript" class="button subtle small">↓ Skript-JSON</button></div><div id="scriptOutput"></div></div>
+        </section>
+
+        <section id="tab-growth" class="page-panel hidden">
+          <div class="eyebrow">04 / LEARN WHAT CONNECTS</div>
+          <h1>Aus Ergebnissen lernen.<br><em>Ohne deine DNA zu verlieren.</em></h1>
+          <p class="lead">Trage echte Instagram-Insights manuell ein. Der Prototyp berechnet einfache Raten und erstellt eine vorsichtige Testidee. Später übernimmt der Growth Agent den Datenimport und die Auswertung.</p>
+          <div class="two-cols">
+            <div class="panel">
+              <h2>Instagram-Ergebnis erfassen</h2>
+              <label for="metricTitle">Beitrag / Reel</label><input id="metricTitle" placeholder="z. B. Strickmaschinen-Experiment #1" />
+              <label for="metricHook">Hook oder kreativer Ansatz</label><input id="metricHook" placeholder="z. B. Überraschender Prozessbeginn" />
+              <div class="mini-grid"><div><label for="metricReach">Erreichte Accounts</label><input id="metricReach" type="number" min="0" placeholder="1200" /></div><div><label for="metricViews">Views</label><input id="metricViews" type="number" min="0" placeholder="1800" /></div><div><label for="metricSaves">Saves</label><input id="metricSaves" type="number" min="0" placeholder="35" /></div><div><label for="metricShares">Shares</label><input id="metricShares" type="number" min="0" placeholder="21" /></div></div>
+              <label for="metricAge">Alter des Beitrags bei Messung</label><select id="metricAge"><option value="24h">ca. 24 Stunden</option><option value="7d" selected>ca. 7 Tage</option><option value="30d">ca. 30 Tage</option></select>
+              <button id="saveMetrics" class="button primary full">Ergebnis speichern & auswerten</button>
+            </div>
+            <div class="panel"><h2>Dein Growth Memory</h2><div id="growthSummary" class="output-placeholder">Füge einen echten veröffentlichten Beitrag hinzu.</div></div>
+          </div>
+          <div class="section-head"><h2>Erfasste Beiträge</h2><span id="metricCount" class="pill">0 Beiträge</span></div><div id="metricList" class="metrics-list"></div>
+          <div class="note footer-note">Diese Kennzahlen sind nur so verlässlich wie deine Eingaben. Vergleiche möglichst Beiträge mit gleicher Messdauer und ähnlichen Formaten. Korrelation ist kein Beweis für eine Ursache.</div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="toast hidden" id="toast" role="status"></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>

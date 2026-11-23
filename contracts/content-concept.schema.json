@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "title": "Content Concept v1",
+  "type": "object",
+  "required": [
+    "projectId",
+    "format",
+    "objective",
+    "title",
+    "hook",
+    "angle",
+    "cta",
+    "styleBibleVersionId",
+    "voiceGuideVersionId",
+    "sources"
+  ],
+  "properties": {
+    "projectId": {
+      "type": "string"
+    },
+    "format": {
+      "enum": [
+        "reel",
+        "ugc",
+        "carousel",
+        "photo"
+      ]
+    },
+    "objective": {
+      "enum": [
+        "reach",
+        "growth",
+        "engagement",
+        "conversion",
+        "practice"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "hook": {
+      "type": "string"
+    },
+    "angle": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "string"
+    },
+    "styleBibleVersionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "voiceGuideVersionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

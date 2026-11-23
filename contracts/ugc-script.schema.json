@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "title": "UGC Script v1",
+  "type": "object",
+  "required": [
+    "conceptId",
+    "estimatedSeconds",
+    "verifiedClaims",
+    "scenes",
+    "warnings"
+  ],
+  "properties": {
+    "conceptId": {
+      "type": "string"
+    },
+    "estimatedSeconds": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 180
+    },
+    "verifiedClaims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "startSecond",
+          "endSecond",
+          "dialogue",
+          "visual",
+          "origin"
+        ],
+        "properties": {
+          "startSecond": {
+            "type": "number",
+            "minimum": 0
+          },
+          "endSecond": {
+            "type": "number",
+            "minimum": 0
+          },
+          "dialogue": {
+            "type": "string"
+          },
+          "visual": {
+            "type": "string"
+          },
+          "origin": {
+            "enum": [
+              "real",
+              "generated",
+              "hybrid"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

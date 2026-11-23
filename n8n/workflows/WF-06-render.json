@@ -1,0 +1,579 @@
+{
+  "id": "wf06CreatorStudio",
+  "name": "Render approved EDL via Creator Studio",
+  "description": "WF-06: Receives the id of an APPROVED edit plan, asks the Creator Studio app to render it (/api/jobs/render), answers 202 at once and polls /api/jobs/video/<jobId> every 10 s (max 30 min) until the render waits for review. n8n only triggers and polls; approvals, rendering and review stay in the app. The Higgsfield branch (Etappe 7) is a disabled placeholder.",
+  "active": false,
+  "nodes": [
+    {
+      "id": "c43bdb5f-b8c9-4eeb-ba19-0aced4f215a1",
+      "name": "Receive render request",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        200
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "creator-studio/render",
+        "responseMode": "responseNode"
+      },
+      "webhookId": "043bd836-32c3-46af-99d9-99d9fbe69e16"
+    },
+    {
+      "id": "37245ed5-5495-4a7c-aa00-ad7328f95d7b",
+      "name": "Has editPlanId?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        220,
+        200
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.body.editPlanId }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "fc095ef3-8232-47c8-a58d-bfcb71730ec2",
+      "name": "Reject missing editPlanId",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        440,
+        400
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{ \"error\": \"validation_error\", \"message\": \"body.editPlanId fehlt (ID eines freigegebenen Schnittplans).\" }",
+        "options": {
+          "responseCode": 400
+        }
+      }
+    },
+    {
+      "id": "f48e62ae-6176-4d16-a790-bbb153c71815",
+      "name": "Higgsfield B-roll (Etappe 7, disabled)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        440,
+        100
+      ],
+      "disabled": true,
+      "parameters": {},
+      "notes": "Placeholder for the optional Higgsfield branch (Release 3, Etappe 7). Disabled: passes items through unchanged. It will only ever run after a per-asset credit approval in the studio, never from n8n alone."
+    },
+    {
+      "id": "17749ea7-e09f-4947-b644-d715ada94e22",
+      "name": "Start render in studio",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        660,
+        100
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:3000/api/jobs/render",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ idempotencyKey: $json.body.idempotencyKey || (\"n8n-wf06-exec-\" + $execution.id), payload: { editPlanId: $json.body.editPlanId } }) }}",
+        "options": {
+          "timeout": 30000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "hOCvdC5mmTRl55Kn",
+          "name": "Studio Job Token"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "onError": "continueErrorOutput",
+      "notes": "Only queues the render of an EDL the user already approved; the app answers 409 otherwise (n8n never approves). Same idempotencyKey = same job, no second render."
+    },
+    {
+      "id": "ebf22763-3ac4-4f7e-80cd-ccbfe15550b9",
+      "name": "Render queued?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        880,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.statusCode }}",
+              "rightValue": 200,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "e42ed4d3-c280-432d-9fd9-564423d8ccf7",
+      "name": "Return studio refusal",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1100,
+        200
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json.body) }}",
+        "options": {
+          "responseCode": "={{ $json.statusCode }}"
+        }
+      }
+    },
+    {
+      "id": "8152a41b-c3f0-4d0d-8225-8c3f8baf4eea",
+      "name": "Report studio unreachable",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        880,
+        300
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ error: \"upstream_error\", message: \"Creator Studio nicht erreichbar oder Zeitüberschreitung: \" + ($json.error?.message || \"unbekannt\") }) }}",
+        "options": {
+          "responseCode": 502
+        }
+      }
+    },
+    {
+      "id": "ea813703-6d58-4990-967a-72153754ed05",
+      "name": "Accept (202) with job id",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1100,
+        -100
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ jobId: $json.body.jobId, renderId: $json.body.renderId, replayed: $json.body.replayed, reviewRequired: true, message: $json.body.replayed ? \"Dieser Render wurde mit demselben Schlüssel schon angestoßen – kein zweiter Render. Status im Video Studio.\" : \"Render läuft. Danach Prüfung im Video Studio.\" }) }}",
+        "options": {
+          "responseCode": 202
+        }
+      }
+    },
+    {
+      "id": "6f823b12-ac0d-4811-af85-ed23828c2b5c",
+      "name": "Poll loop",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1320,
+        -100
+      ],
+      "parameters": {
+        "options": {
+          "reset": true
+        }
+      }
+    },
+    {
+      "id": "2baa3777-b59b-4bc1-bb67-8833e079b3a5",
+      "name": "Wait 10 s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1540,
+        0
+      ],
+      "parameters": {
+        "amount": 10
+      },
+      "webhookId": "a6c61a7c-80de-4c32-be25-bf5709d2a076"
+    },
+    {
+      "id": "66c81ac6-de08-46d9-83ab-557192cab3e4",
+      "name": "Get render status",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1760,
+        0
+      ],
+      "parameters": {
+        "url": "=http://host.docker.internal:3000/api/jobs/video/{{ $('Start render in studio').first().json.body.jobId }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "hOCvdC5mmTRl55Kn",
+          "name": "Studio Job Token"
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "0fddc764-1fc6-4528-8038-1250e2250ffb",
+      "name": "Job ended?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        1980,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.done }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "74416435-cfa3-4091-8eca-b223a1de4024",
+      "name": "Render succeeded?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        2200,
+        -100
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "succeeded",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "80c6df0c-3a1a-441d-b028-0eb55172ac4e",
+      "name": "Render finished",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2420,
+        -200
+      ],
+      "parameters": {},
+      "notes": "End of WF-06: the job succeeded. The render's review state (pending_review, approved/rejected if the user was quicker, or null if deleted) is in this node's input. n8n does not approve or publish."
+    },
+    {
+      "id": "3daeb2c6-3b64-438e-b880-9f8bf7440870",
+      "name": "Render failed or cancelled",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        2420,
+        0
+      ],
+      "parameters": {
+        "errorMessage": "={{ 'Render ' + $json.status + ': ' + ($json.error || 'ohne Meldung') }}"
+      },
+      "notes": "Only failed or cancelled jobs reach this node. The app sends no file paths in the error text."
+    },
+    {
+      "id": "89e00a85-8961-49b1-99b8-d18f7ab152b1",
+      "name": "Poll limit reached?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        2200,
+        150
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $runIndex }}",
+              "rightValue": 180,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "7d3b23e3-29af-4587-8d43-c9be4a333490",
+      "name": "Stop: no result after 30 min",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        2420,
+        150
+      ],
+      "parameters": {
+        "errorMessage": "Render hat nach 30 Minuten kein Ergebnis – Status im Video Studio prüfen."
+      }
+    }
+  ],
+  "connections": {
+    "Receive render request": {
+      "main": [
+        [
+          {
+            "node": "Has editPlanId?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has editPlanId?": {
+      "main": [
+        [
+          {
+            "node": "Higgsfield B-roll (Etappe 7, disabled)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Reject missing editPlanId",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Higgsfield B-roll (Etappe 7, disabled)": {
+      "main": [
+        [
+          {
+            "node": "Start render in studio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start render in studio": {
+      "main": [
+        [
+          {
+            "node": "Render queued?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Report studio unreachable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Render queued?": {
+      "main": [
+        [
+          {
+            "node": "Accept (202) with job id",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Return studio refusal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Accept (202) with job id": {
+      "main": [
+        [
+          {
+            "node": "Poll loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Poll loop": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Wait 10 s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 10 s": {
+      "main": [
+        [
+          {
+            "node": "Get render status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get render status": {
+      "main": [
+        [
+          {
+            "node": "Job ended?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Job ended?": {
+      "main": [
+        [
+          {
+            "node": "Render succeeded?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Poll limit reached?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Render succeeded?": {
+      "main": [
+        [
+          {
+            "node": "Render finished",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Render failed or cancelled",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Poll limit reached?": {
+      "main": [
+        [
+          {
+            "node": "Stop: no result after 30 min",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Poll loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": true
+  }
+}

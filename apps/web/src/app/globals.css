@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* Visual language ported from prototype/style.css */
+@theme {
+  /* Olive with lime (tasteskill deal "olive on bone"), page ground white on request:
+     olive for text, links and focus; lime only as a fill under olive ink. */
+  --color-bg: #ffffff;
+  --color-sidebar: #f5f7f0;
+  --color-card: #ffffff;
+  --color-card2: #f5f7f0;
+  --color-line: #e2e6d8;
+  --color-ink: #1f2617;
+  --color-muted: #5b6450;
+  --color-accent: #4a6116;
+  --color-accent-dark: #8fb83e;
+  --color-lime: #d8fb96;
+  --color-olive-ink: #2c3a0c;
+  --color-danger: #a8321f;
+  --color-warn: #8a5a00;
+  --font-sans: var(--font-reddit), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-reddit), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+:root { color-scheme: light; }
+html, body { background: var(--color-bg); color: var(--color-ink); }
+body { font-family: var(--font-sans); }
+
+@layer components {
+  .field { @apply w-full rounded-lg border border-[#d2d8c5] bg-[#ffffff] px-3 py-2.5 text-[13px] text-ink outline-none placeholder:text-[#959c8a] focus:border-[#4a6116] focus:ring-2 focus:ring-[#4a611633]; }
+  .label { @apply mt-4 mb-2 block text-[11px] font-semibold text-[#454d3d]; }
+  .eyebrow { @apply mb-4 font-mono text-[11px] font-medium tracking-[0.08em] text-accent; }
+  .panel { @apply min-w-0 rounded-xl border border-line bg-card p-6; }
+  .hint { @apply text-xs leading-relaxed text-[#5b6450]; }
+  .tag { @apply inline-flex items-center gap-1 rounded-full border border-[#c9de9a] bg-[#eef6dc] px-2.5 py-1 text-[11px] text-[#3a4d0f]; }
+  .tag-avoid { @apply border-[#f0b4ad] bg-[#fdecea] text-[#9b2c22]; }
+  .note { @apply mt-4 rounded-lg border border-[#d5e3b5] bg-[#f5f7f0] p-3 text-[11px] leading-relaxed text-[#454d3d]; }
+  /* Read view of strategy, profile and sources (MarkdownView) */
+  .md-view { @apply text-[13px] leading-relaxed text-ink; }
+  .md-view h1 { @apply mt-0 mb-3 text-xl font-bold; }
+  .md-view h2 { @apply mt-6 mb-2 border-b border-line pb-1 text-base font-bold; }
+  .md-view h3 { @apply mt-4 mb-1.5 text-sm font-bold; }
+  .md-view p { @apply my-2; }
+  .md-view ul { @apply my-2 list-disc pl-5; }
+  .md-view ol { @apply my-2 list-decimal pl-5; }
+  .md-view li { @apply my-0.5; }
+  .md-view a { @apply text-accent underline; }
+  .md-view code { @apply rounded bg-card2 px-1 font-mono text-[12px]; }
+  .md-view pre { @apply my-2 overflow-auto rounded-lg border border-line bg-card2 p-3 font-mono text-[11px]; }
+  .md-view table { @apply my-3 w-full border-collapse text-[12px]; }
+  .md-view th, .md-view td { @apply border border-line px-2 py-1 text-left align-top; }
+  .md-view th { @apply bg-card2 font-semibold; }
+  .md-view blockquote { @apply my-2 border-l-2 border-line pl-3 text-muted; }
+}
+
+@keyframes appear { from { opacity: .4; transform: translateY(5px) } to { opacity: 1; transform: none } }
+.appear { animation: appear .16s ease-out; }
+@keyframes stage-fade { from { opacity: 0 } to { opacity: 1 } }
+.stage-fade { animation: stage-fade .15s ease-out; }
+@media (prefers-reduced-motion: reduce) { .stage-fade { animation: none; } }
+
+/* One focus ring in the accent; buttons and links answer the pointer (hover step, press). */
+:where(a, button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+h1, h2, h3 { letter-spacing: -0.02em; }
+:root { accent-color: var(--color-accent); }
+::selection { background: var(--color-lime); color: var(--color-olive-ink); }
+
+/* Etappe 12 editor: focus on the dark timeline in lime (the accent ring would not be visible there) */
+.tl-focus:focus-visible { outline: 2px solid var(--color-lime); outline-offset: 1px; }

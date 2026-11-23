@@ -1,0 +1,180 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`layout and ASS > ASS snapshots: one line per event at the core position, \\q2, escaped text; colour → under → image → over > editorial square text 1`] = `
+{
+  "over": "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Title,AvenirNext-Bold,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+Style: Body,AvenirNext-Regular,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+Style: Label,Arial,34,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,12,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.00,0:00:10.00,Title,,0,0,0,,{\\an4\\pos(96,171)\\fs150\\q2\\1c&H4AB0E8&}02
+Dialogue: 2,0:00:00.00,0:00:10.00,Title,,0,0,0,,{\\an4\\pos(96,314)\\fs76\\q2\\1c&HFFFFFF&}Das Problem
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an4\\pos(96,417)\\fs50\\q2\\1c&HFFFFFF&}Mein Kopf war morgens schon voll, bevor ich
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an4\\pos(96,473)\\fs50\\q2\\1c&HFFFFFF&}überhaupt wach war.
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an6\\pos(1004,1008)\\fs28\\q2\\1c&HFFFFFF&}2/6
+",
+  "under": "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(96,66)\\1c&HFFFFFF&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 888 0 l 888 4 l 0 4{\\p0}
+",
+}
+`;
+
+exports[`layout and ASS > ASS snapshots: one line per event at the core position, \\q2, escaped text; colour → under → image → over > karte before/after 1`] = `
+{
+  "over": "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1350
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Title,AvenirNext-Bold,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+Style: Body,AvenirNext-Regular,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+Style: Label,Arial,34,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,12,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.00,0:00:10.00,Title,,0,0,0,,{\\an4\\pos(96,126)\\fs60\\q2\\1c&HFFFFFF&}Mythos oder Wahrheit?
+Dialogue: 1,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(124,224)\\1c&H4AB0E8&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 121 0 l 121 52 l 0 52{\\p0}
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an5\\pos(185,250)\\fs30\\q2\\1c&H111111&}Mythos
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an4\\pos(124,483)\\fs50\\q2\\1c&H111111&}Stricken ist nur was für den Winter.
+Dialogue: 1,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(124,749)\\1c&H4AB0E8&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 135 0 l 135 52 l 0 52{\\p0}
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an5\\pos(192,775)\\fs30\\q2\\1c&H111111&}Wahrheit
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an4\\pos(124,1008)\\fs50\\q2\\1c&H111111&}Baumwolle geht das ganze Jahr.
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an6\\pos(1004,1278)\\fs28\\q2\\1c&HFFFFFF&}5/6
+",
+  "under": "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1350
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(68,68)\\1c&H4AB0E8&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 976 0 l 976 1198 l 0 1198{\\p0}
+Dialogue: 0,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(52,52)\\1c&H17261F&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 976 0 l 976 1198 l 0 1198{\\p0}
+Dialogue: 0,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(96,196)\\1c&HEEF4F7&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 888 0 l 888 493 l 0 493{\\p0}
+Dialogue: 0,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(96,721)\\1c&HC8E4F3&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 888 0 l 888 493 l 0 493{\\p0}
+",
+}
+`;
+
+exports[`layout and ASS > ASS snapshots: one line per event at the core position, \\q2, escaped text; colour → under → image → over > klar list 1`] = `
+{
+  "over": "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1350
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Title,AvenirNext-Bold,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+Style: Body,AvenirNext-Regular,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+Style: Label,Arial,34,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,12,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.00,0:00:10.00,Title,,0,0,0,,{\\an4\\pos(96,130)\\fs68\\q2\\1c&H3B4A2E&}Was mir hilft
+Dialogue: 1,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(96,199)\\1c&H4AB0E8&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 56 0 l 56 56 l 0 56{\\p0}
+Dialogue: 2,0:00:00.00,0:00:10.00,Title,,0,0,0,,{\\an5\\pos(124,227)\\fs32\\q2\\1c&H111111&}1
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an4\\pos(180,227)\\fs46\\q2\\1c&H3B4A2E&}Wolle am Vorabend bereitlegen
+Dialogue: 1,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(96,271)\\1c&H4AB0E8&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 56 0 l 56 56 l 0 56{\\p0}
+Dialogue: 2,0:00:00.00,0:00:10.00,Title,,0,0,0,,{\\an5\\pos(124,299)\\fs32\\q2\\1c&H111111&}2
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an4\\pos(180,299)\\fs46\\q2\\1c&H3B4A2E&}Handy im Flur lassen
+Dialogue: 1,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(96,343)\\1c&H4AB0E8&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 56 0 l 56 56 l 0 56{\\p0}
+Dialogue: 2,0:00:00.00,0:00:10.00,Title,,0,0,0,,{\\an5\\pos(124,371)\\fs32\\q2\\1c&H111111&}3
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an4\\pos(180,371)\\fs46\\q2\\1c&H3B4A2E&}Eine Reihe zählt schon
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an6\\pos(1004,1278)\\fs28\\q2\\1c&H3B4A2E&}3/6
+",
+  "under": "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1350
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(56,96)\\1c&H4AB0E8&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 14 0 l 14 68 l 0 68{\\p0}
+",
+}
+`;
+
+exports[`layout and ASS > ASS snapshots: one line per event at the core position, \\q2, escaped text; colour → under → image → over > klar title 1`] = `
+{
+  "over": "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1350
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Title,AvenirNext-Bold,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+Style: Body,AvenirNext-Regular,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
+Style: Label,Arial,34,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,12,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.00,0:00:10.00,Title,,0,0,0,,{\\an4\\pos(96,652)\\fs112\\q2\\1c&H3B4A2E&}Warum ich jeden
+Dialogue: 2,0:00:00.00,0:00:10.00,Title,,0,0,0,,{\\an4\\pos(96,778)\\fs112\\q2\\1c&H3B4A2E&}Morgen stricke
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an4\\pos(96,897)\\fs46\\q2\\1c&H3B4A2E&}Eine Stunde, bevor der Tag laut wird.
+Dialogue: 2,0:00:00.00,0:00:10.00,Body,,0,0,0,,{\\an6\\pos(1004,1278)\\fs28\\q2\\1c&H3B4A2E&}1/6
+",
+  "under": "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1350
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.00,Shape,,0,0,0,,{\\an7\\pos(56,596)\\1c&H4AB0E8&\\1a&H00&\\bord0\\shad0\\p1}m 0 0 l 14 0 l 14 238 l 0 238{\\p0}
+",
+}
+`;

@@ -1,0 +1,32 @@
+# Creator Studio's own n8n (separate from any other local n8n). Binds to 127.0.0.1 only.
+# Orchestration only: workflows call the studio app's /api/jobs/* (Bearer STUDIO_JOB_TOKEN).
+# The n8n MCP (Claude Code plugin n8n-skills) connects to http://localhost:5679/mcp-server/http;
+# N8N_EDITOR_BASE_URL must be that same origin, or the MCP OAuth sign-in is rejected.
+name: creator-studio
+services:
+  n8n:
+    image: ${N8N_IMAGE:-docker.n8n.io/n8nio/n8n:2.47.7}
+    ports:
+      - '127.0.0.1:5679:5678'
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - N8N_EDITOR_BASE_URL=http://localhost:5679
+      - WEBHOOK_URL=http://localhost:5679/
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY:?Set strong random value in .env}
+      - GENERIC_TIMEZONE=Europe/Berlin
+      - TZ=Europe/Berlin
+      - N8N_DIAGNOSTICS_ENABLED=false
+    # Lets workflows reach the studio app on the host via host.docker.internal.
+    # Docker Desktop (macOS/Windows): works with the default `pnpm dev`/`pnpm start` (127.0.0.1) – tested.
+    # Linux: host-gateway is the docker bridge IP, but the app listens on 127.0.0.1 only. Start the app
+    # additionally bound to the bridge, e.g. `pnpm --filter @studio/web exec next start --hostname 172.17.0.1`
+    # (not tested). /api/jobs/* always requires STUDIO_JOB_TOKEN.
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - studio_n8n_data:/home/node/.n8n
+    restart: unless-stopped
+volumes:
+  studio_n8n_data:

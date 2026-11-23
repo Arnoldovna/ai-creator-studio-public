@@ -1,0 +1,25 @@
+{
+  "name": "ai-creator-studio",
+  "private": true,
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @studio/web dev",
+    "build": "pnpm --filter @studio/web build",
+    "start": "pnpm --filter @studio/web start",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "test:e2e": "pnpm --filter @studio/web test:e2e",
+    "test:whisper": "pnpm --filter @studio/web test:whisper",
+    "test:migrations": "node --test supabase/tests/migrations.test.mjs",
+    "test:db": "SUPABASE_INTERNAL_IMAGE_REGISTRY=${SUPABASE_INTERNAL_IMAGE_REGISTRY:-docker.io} npx --yes supabase@3.1.0 test db",
+    "db:start": "SUPABASE_INTERNAL_IMAGE_REGISTRY=${SUPABASE_INTERNAL_IMAGE_REGISTRY:-docker.io} npx --yes supabase@3.1.0 start -x studio,imgproxy,realtime,edge-runtime,logflare,vector,supavisor,mailpit,postgres-meta",
+    "db:stop": "npx --yes supabase@3.1.0 stop"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.16"
+  }
+}

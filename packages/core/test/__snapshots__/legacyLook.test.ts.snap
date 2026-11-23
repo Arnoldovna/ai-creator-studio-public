@@ -1,0 +1,665 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`legacy looks (no rules.design) are unchanged > ASS of hook, every overlay kind, subtitles and the AI label 1`] = `
+[
+  "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,64,&H00FFFFFF,&H000000FF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,4,0,2,90,90,380,1
+Style: Label,Arial,44,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,14,0,7,60,60,170,1
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: LowerThird,AvenirNext-Bold,56,&H00FFFFFF,&H000000FF,&H00111111,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,4,0,0,0,1
+Style: Keyword,AvenirNext-Bold,72,&H00111111,&H000000FF,&H00A6A09A,&H00A6A09A,-1,0,0,0,100,100,0,0,3,18,0,5,0,0,0,1
+Style: Hook,AvenirNext-Bold,96,&H00FFFFFF,&H000000FF,&H00111111,&H00111111,-1,0,0,0,100,100,0,0,3,18,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.00,Default,,0,0,0,,Hallo zusammen
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(84,415)\\1c&H111111&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 852 0 l 852 150 l 0 150{\\p0}
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(72,415)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 150 l 0 150{\\p0}
+Dialogue: 1,0:00:02.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,1042)\\frz0\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,340)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,1180)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,352)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(1038,352)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,490)\\frz-90\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 2,0:00:00.00,0:00:02.00,LowerThird,,0,0,0,,{\\an4\\pos(108,490)\\fs60\\q2\\fad(150,150)}Carola, Strickerin
+Dialogue: 2,0:00:01.00,0:00:03.00,Keyword,,0,0,0,,{\\an5\\pos(540,766)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}Wolle & Garn
+Dialogue: 2,0:00:05.00,0:00:06.00,Keyword,,0,0,0,,{\\an5\\pos(540,1042)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}(⧵pos(0,0))böse
+Dialogue: 3,0:00:00.00,0:00:02.50,Hook,,0,0,0,,{\\an5\\pos(540,543)\\fs96\\q2\\fad(120,200)}So färbst du\\NWolle mit\\NZwiebelschalen
+Dialogue: 9,0:00:00.00,0:00:03.00,Label,,0,0,0,,KI-generierte Bildelemente
+",
+  "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,64,&H00FFFFFF,&H000000FF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,4,0,2,90,90,380,1
+Style: Label,Arial,44,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,14,0,7,60,60,170,1
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: LowerThird,Georgia,56,&H00FFFFFF,&H000000FF,&H00111111,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,4,0,0,0,1
+Style: Keyword,Georgia,72,&H00111111,&H000000FF,&H00A6A09A,&H00A6A09A,-1,0,0,0,100,100,0,0,3,18,0,5,0,0,0,1
+Style: Hook,Georgia,96,&H00FFFFFF,&H000000FF,&H00111111,&H00111111,-1,0,0,0,100,100,0,0,3,18,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.00,Default,,0,0,0,,Hallo zusammen
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(84,415)\\1c&H111111&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 852 0 l 852 150 l 0 150{\\p0}
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(72,415)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 150 l 0 150{\\p0}
+Dialogue: 1,0:00:02.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,1042)\\frz0\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,340)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,1180)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,352)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(1038,352)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,490)\\frz-90\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 2,0:00:00.00,0:00:02.00,LowerThird,,0,0,0,,{\\an4\\pos(108,490)\\fs60\\q2\\fad(150,150)}Carola, Strickerin
+Dialogue: 2,0:00:01.00,0:00:03.00,Keyword,,0,0,0,,{\\an5\\pos(540,766)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}Wolle & Garn
+Dialogue: 2,0:00:05.00,0:00:06.00,Keyword,,0,0,0,,{\\an5\\pos(540,1042)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}(⧵pos(0,0))böse
+Dialogue: 3,0:00:00.00,0:00:02.50,Hook,,0,0,0,,{\\an5\\pos(540,543)\\fs96\\q2\\fad(120,200)}So färbst du\\NWolle mit\\NZwiebelschalen
+Dialogue: 9,0:00:00.00,0:00:03.00,Label,,0,0,0,,KI-generierte Bildelemente
+",
+  "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,64,&H00FFFFFF,&H000000FF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,4,0,2,90,90,380,1
+Style: Label,Arial,44,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,14,0,7,60,60,170,1
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: LowerThird,AvenirNext-Bold,56,&H00FFFFFF,&H000000FF,&H00111111,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,4,0,0,0,1
+Style: Keyword,AvenirNext-Bold,72,&H00111111,&H000000FF,&H00A6A09A,&H00A6A09A,-1,0,0,0,100,100,0,0,3,18,0,5,0,0,0,1
+Style: Hook,AvenirNext-Bold,96,&H00FFFFFF,&H000000FF,&H00111111,&H00111111,-1,0,0,0,100,100,0,0,3,18,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.00,Default,,0,0,0,,Hallo zusammen
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(84,415)\\1c&H111111&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 852 0 l 852 150 l 0 150{\\p0}
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(72,415)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 150 l 0 150{\\p0}
+Dialogue: 1,0:00:02.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,1042)\\frz0\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,340)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,1180)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,352)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(1038,352)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,490)\\frz-90\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 2,0:00:00.00,0:00:02.00,LowerThird,,0,0,0,,{\\an4\\pos(108,490)\\fs60\\q2\\fad(150,150)}Carola, Strickerin
+Dialogue: 2,0:00:01.00,0:00:03.00,Keyword,,0,0,0,,{\\an5\\pos(540,766)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}Wolle & Garn
+Dialogue: 2,0:00:05.00,0:00:06.00,Keyword,,0,0,0,,{\\an5\\pos(540,1042)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}(⧵pos(0,0))böse
+Dialogue: 3,0:00:00.00,0:00:02.50,Hook,,0,0,0,,{\\an5\\pos(540,543)\\fs96\\q2\\fad(120,200)}So färbst du\\NWolle mit\\NZwiebelschalen
+Dialogue: 9,0:00:00.00,0:00:03.00,Label,,0,0,0,,KI-generierte Bildelemente
+",
+  "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,64,&H00FFFFFF,&H000000FF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,4,0,2,90,90,380,1
+Style: Label,Arial,44,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,14,0,7,60,60,170,1
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: LowerThird,Georgia,56,&H00FFFFFF,&H000000FF,&H00111111,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,4,0,0,0,1
+Style: Keyword,Georgia,72,&H00111111,&H000000FF,&H00A6A09A,&H00A6A09A,-1,0,0,0,100,100,0,0,3,18,0,5,0,0,0,1
+Style: Hook,Georgia,96,&H00FFFFFF,&H000000FF,&H00111111,&H00111111,-1,0,0,0,100,100,0,0,3,18,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.00,Default,,0,0,0,,Hallo zusammen
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(84,415)\\1c&H111111&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 852 0 l 852 150 l 0 150{\\p0}
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(72,415)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 150 l 0 150{\\p0}
+Dialogue: 1,0:00:02.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,1042)\\frz0\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,340)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,1180)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,352)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(1038,352)\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,490)\\frz-90\\1c&HA6A09A&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 2,0:00:00.00,0:00:02.00,LowerThird,,0,0,0,,{\\an4\\pos(108,490)\\fs60\\q2\\fad(150,150)}Carola, Strickerin
+Dialogue: 2,0:00:01.00,0:00:03.00,Keyword,,0,0,0,,{\\an5\\pos(540,766)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}Wolle & Garn
+Dialogue: 2,0:00:05.00,0:00:06.00,Keyword,,0,0,0,,{\\an5\\pos(540,1042)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}(⧵pos(0,0))böse
+Dialogue: 3,0:00:00.00,0:00:02.50,Hook,,0,0,0,,{\\an5\\pos(540,543)\\fs96\\q2\\fad(120,200)}So färbst du\\NWolle mit\\NZwiebelschalen
+Dialogue: 9,0:00:00.00,0:00:03.00,Label,,0,0,0,,KI-generierte Bildelemente
+",
+  "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,64,&H00FFFFFF,&H000000FF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,4,0,2,90,90,380,1
+Style: Label,Arial,44,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,14,0,7,60,60,170,1
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: LowerThird,AvenirNext-Bold,56,&H00111111,&H000000FF,&H00D8E9F4,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,4,0,0,0,1
+Style: Keyword,AvenirNext-Bold,72,&H00FFFFFF,&H000000FF,&H003D55C8,&H003D55C8,-1,0,0,0,100,100,0,0,3,18,0,5,0,0,0,1
+Style: Hook,AvenirNext-Bold,96,&H00111111,&H000000FF,&H00D8E9F4,&H00D8E9F4,-1,0,0,0,100,100,0,0,3,18,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.00,Default,,0,0,0,,Hallo zusammen
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(84,415)\\1c&HD8E9F4&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 852 0 l 852 150 l 0 150{\\p0}
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(72,415)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 150 l 0 150{\\p0}
+Dialogue: 1,0:00:02.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,1042)\\frz0\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,340)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,1180)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,352)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(1038,352)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,490)\\frz-90\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 2,0:00:00.00,0:00:02.00,LowerThird,,0,0,0,,{\\an4\\pos(108,490)\\fs60\\q2\\fad(150,150)}Carola, Strickerin
+Dialogue: 2,0:00:01.00,0:00:03.00,Keyword,,0,0,0,,{\\an5\\pos(540,766)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}Wolle & Garn
+Dialogue: 2,0:00:05.00,0:00:06.00,Keyword,,0,0,0,,{\\an5\\pos(540,1042)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}(⧵pos(0,0))böse
+Dialogue: 3,0:00:00.00,0:00:02.50,Hook,,0,0,0,,{\\an5\\pos(540,543)\\fs96\\q2\\fad(120,200)}So färbst du\\NWolle mit\\NZwiebelschalen
+Dialogue: 9,0:00:00.00,0:00:03.00,Label,,0,0,0,,KI-generierte Bildelemente
+",
+  "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,64,&H00FFFFFF,&H000000FF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,4,0,2,90,90,380,1
+Style: Label,Arial,44,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,14,0,7,60,60,170,1
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: LowerThird,Georgia,56,&H00111111,&H000000FF,&H00D8E9F4,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,4,0,0,0,1
+Style: Keyword,Georgia,72,&H00FFFFFF,&H000000FF,&H003D55C8,&H003D55C8,-1,0,0,0,100,100,0,0,3,18,0,5,0,0,0,1
+Style: Hook,Georgia,96,&H00111111,&H000000FF,&H00D8E9F4,&H00D8E9F4,-1,0,0,0,100,100,0,0,3,18,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.00,Default,,0,0,0,,Hallo zusammen
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(84,415)\\1c&HD8E9F4&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 852 0 l 852 150 l 0 150{\\p0}
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(72,415)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 150 l 0 150{\\p0}
+Dialogue: 1,0:00:02.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,1042)\\frz0\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,340)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,1180)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,352)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(1038,352)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,490)\\frz-90\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 2,0:00:00.00,0:00:02.00,LowerThird,,0,0,0,,{\\an4\\pos(108,490)\\fs60\\q2\\fad(150,150)}Carola, Strickerin
+Dialogue: 2,0:00:01.00,0:00:03.00,Keyword,,0,0,0,,{\\an5\\pos(540,766)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}Wolle & Garn
+Dialogue: 2,0:00:05.00,0:00:06.00,Keyword,,0,0,0,,{\\an5\\pos(540,1042)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}(⧵pos(0,0))böse
+Dialogue: 3,0:00:00.00,0:00:02.50,Hook,,0,0,0,,{\\an5\\pos(540,543)\\fs96\\q2\\fad(120,200)}So färbst du\\NWolle mit\\NZwiebelschalen
+Dialogue: 9,0:00:00.00,0:00:03.00,Label,,0,0,0,,KI-generierte Bildelemente
+",
+  "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,64,&H00FFFFFF,&H000000FF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,4,0,2,90,90,380,1
+Style: Label,Arial,44,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,14,0,7,60,60,170,1
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: LowerThird,AvenirNext-Bold,56,&H00FFFFFF,&H000000FF,&H003D55C8,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,4,0,0,0,1
+Style: Keyword,AvenirNext-Bold,72,&H00FFFFFF,&H000000FF,&H002A3020,&H002A3020,-1,0,0,0,100,100,0,0,3,18,0,5,0,0,0,1
+Style: Hook,AvenirNext-Bold,96,&H00FFFFFF,&H000000FF,&H003D55C8,&H003D55C8,-1,0,0,0,100,100,0,0,3,18,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.00,Default,,0,0,0,,Hallo zusammen
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(84,415)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 852 0 l 852 150 l 0 150{\\p0}
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(72,415)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 150 l 0 150{\\p0}
+Dialogue: 1,0:00:02.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,1042)\\frz0\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,340)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,1180)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,352)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(1038,352)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,490)\\frz-90\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 2,0:00:00.00,0:00:02.00,LowerThird,,0,0,0,,{\\an4\\pos(108,490)\\fs60\\q2\\fad(150,150)}Carola, Strickerin
+Dialogue: 2,0:00:01.00,0:00:03.00,Keyword,,0,0,0,,{\\an5\\pos(540,766)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}Wolle & Garn
+Dialogue: 2,0:00:05.00,0:00:06.00,Keyword,,0,0,0,,{\\an5\\pos(540,1042)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}(⧵pos(0,0))böse
+Dialogue: 3,0:00:00.00,0:00:02.50,Hook,,0,0,0,,{\\an5\\pos(540,543)\\fs96\\q2\\fad(120,200)}So färbst du\\NWolle mit\\NZwiebelschalen
+Dialogue: 9,0:00:00.00,0:00:03.00,Label,,0,0,0,,KI-generierte Bildelemente
+",
+  "[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,64,&H00FFFFFF,&H000000FF,&H00101010,&H64000000,-1,0,0,0,100,100,0,0,1,4,0,2,90,90,380,1
+Style: Label,Arial,44,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,14,0,7,60,60,170,1
+Style: Shape,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: LowerThird,Georgia,56,&H00FFFFFF,&H000000FF,&H003D55C8,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,4,0,0,0,1
+Style: Keyword,Georgia,72,&H00FFFFFF,&H000000FF,&H002A3020,&H002A3020,-1,0,0,0,100,100,0,0,3,18,0,5,0,0,0,1
+Style: Hook,Georgia,96,&H00FFFFFF,&H000000FF,&H003D55C8,&H003D55C8,-1,0,0,0,100,100,0,0,3,18,0,5,90,90,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.00,Default,,0,0,0,,Hallo zusammen
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(84,415)\\1c&H3D55C8&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 852 0 l 852 150 l 0 150{\\p0}
+Dialogue: 1,0:00:00.00,0:00:02.00,Shape,,0,0,0,,{\\an7\\pos(72,415)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 150 l 0 150{\\p0}
+Dialogue: 1,0:00:02.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,1042)\\frz0\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,340)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,1180)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 1020 0 l 1020 12 l 0 12{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(30,352)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:05.00,Shape,,0,0,0,,{\\an7\\pos(1038,352)\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 0 0 l 12 0 l 12 828 l 0 828{\\p0}
+Dialogue: 1,0:00:03.00,0:00:04.00,Shape,,0,0,0,,{\\an5\\pos(540,490)\\frz-90\\1c&H2A3020&\\1a&H00&\\bord0\\shad0\\fad(150,150)\\p1}m 40 0 l 80 0 l 80 100 l 120 100 l 60 180 l 0 100 l 40 100{\\p0}
+Dialogue: 2,0:00:00.00,0:00:02.00,LowerThird,,0,0,0,,{\\an4\\pos(108,490)\\fs60\\q2\\fad(150,150)}Carola, Strickerin
+Dialogue: 2,0:00:01.00,0:00:03.00,Keyword,,0,0,0,,{\\an5\\pos(540,766)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}Wolle & Garn
+Dialogue: 2,0:00:05.00,0:00:06.00,Keyword,,0,0,0,,{\\an5\\pos(540,1042)\\fs84\\q2\\fad(150,150)\\fscx80\\fscy80\\t(0,150,\\fscx100\\fscy100)}(⧵pos(0,0))böse
+Dialogue: 3,0:00:00.00,0:00:02.50,Hook,,0,0,0,,{\\an5\\pos(540,543)\\fs96\\q2\\fad(120,200)}So färbst du\\NWolle mit\\NZwiebelschalen
+Dialogue: 9,0:00:00.00,0:00:03.00,Label,,0,0,0,,KI-generierte Bildelemente
+",
+]
+`;
+
+exports[`legacy looks (no rules.design) are unchanged > tokens and lookKey of every legacy version and font 1`] = `
+[
+  {
+    "key": "placeholder||Avenir Next|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Avenir Next",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Helvetica Neue|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Helvetica Neue",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Futura|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Futura",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Georgia|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Georgia",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||DIN Condensed|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "DIN Condensed",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Avenir Next|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Avenir Next",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Helvetica Neue|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Helvetica Neue",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Futura|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Futura",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Georgia|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Georgia",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||DIN Condensed|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "DIN Condensed",
+      "label": "Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Avenir Next|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Avenir Next",
+      "label": "Style Bible v3 hat keine Farbpalette – Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Helvetica Neue|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Helvetica Neue",
+      "label": "Style Bible v3 hat keine Farbpalette – Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Futura|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Futura",
+      "label": "Style Bible v3 hat keine Farbpalette – Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||Georgia|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "Georgia",
+      "label": "Style Bible v3 hat keine Farbpalette – Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "placeholder||DIN Condensed|#9AA0A6|#111111|#FFFFFF",
+    "t": {
+      "accent": "#9AA0A6",
+      "box": "#111111",
+      "font": "DIN Condensed",
+      "label": "Style Bible v3 hat keine Farbpalette – Neutraler Platzhalter-Stil (keine aktive Style Bible)",
+      "source": "placeholder",
+      "styleBibleVersionId": null,
+      "text": "#FFFFFF",
+      "version": null,
+    },
+  },
+  {
+    "key": "style_bible|sb-one|Avenir Next|#FFCC00|#735C00|#FFFFFF",
+    "t": {
+      "accent": "#FFCC00",
+      "box": "#735C00",
+      "font": "Avenir Next",
+      "label": "Style Bible v4",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-one",
+      "text": "#FFFFFF",
+      "version": 4,
+    },
+  },
+  {
+    "key": "style_bible|sb-one|Helvetica Neue|#FFCC00|#735C00|#FFFFFF",
+    "t": {
+      "accent": "#FFCC00",
+      "box": "#735C00",
+      "font": "Helvetica Neue",
+      "label": "Style Bible v4",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-one",
+      "text": "#FFFFFF",
+      "version": 4,
+    },
+  },
+  {
+    "key": "style_bible|sb-one|Futura|#FFCC00|#735C00|#FFFFFF",
+    "t": {
+      "accent": "#FFCC00",
+      "box": "#735C00",
+      "font": "Futura",
+      "label": "Style Bible v4",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-one",
+      "text": "#FFFFFF",
+      "version": 4,
+    },
+  },
+  {
+    "key": "style_bible|sb-one|Georgia|#FFCC00|#735C00|#FFFFFF",
+    "t": {
+      "accent": "#FFCC00",
+      "box": "#735C00",
+      "font": "Georgia",
+      "label": "Style Bible v4",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-one",
+      "text": "#FFFFFF",
+      "version": 4,
+    },
+  },
+  {
+    "key": "style_bible|sb-one|DIN Condensed|#FFCC00|#735C00|#FFFFFF",
+    "t": {
+      "accent": "#FFCC00",
+      "box": "#735C00",
+      "font": "DIN Condensed",
+      "label": "Style Bible v4",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-one",
+      "text": "#FFFFFF",
+      "version": 4,
+    },
+  },
+  {
+    "key": "style_bible|sb-two|Avenir Next|#C8553D|#F4E9D8|#111111",
+    "t": {
+      "accent": "#C8553D",
+      "box": "#F4E9D8",
+      "font": "Avenir Next",
+      "label": "Style Bible v5",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-two",
+      "text": "#111111",
+      "version": 5,
+    },
+  },
+  {
+    "key": "style_bible|sb-two|Helvetica Neue|#C8553D|#F4E9D8|#111111",
+    "t": {
+      "accent": "#C8553D",
+      "box": "#F4E9D8",
+      "font": "Helvetica Neue",
+      "label": "Style Bible v5",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-two",
+      "text": "#111111",
+      "version": 5,
+    },
+  },
+  {
+    "key": "style_bible|sb-two|Futura|#C8553D|#F4E9D8|#111111",
+    "t": {
+      "accent": "#C8553D",
+      "box": "#F4E9D8",
+      "font": "Futura",
+      "label": "Style Bible v5",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-two",
+      "text": "#111111",
+      "version": 5,
+    },
+  },
+  {
+    "key": "style_bible|sb-two|Georgia|#C8553D|#F4E9D8|#111111",
+    "t": {
+      "accent": "#C8553D",
+      "box": "#F4E9D8",
+      "font": "Georgia",
+      "label": "Style Bible v5",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-two",
+      "text": "#111111",
+      "version": 5,
+    },
+  },
+  {
+    "key": "style_bible|sb-two|DIN Condensed|#C8553D|#F4E9D8|#111111",
+    "t": {
+      "accent": "#C8553D",
+      "box": "#F4E9D8",
+      "font": "DIN Condensed",
+      "label": "Style Bible v5",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-two",
+      "text": "#111111",
+      "version": 5,
+    },
+  },
+  {
+    "key": "style_bible|sb-dark|Avenir Next|#20302A|#C8553D|#FFFFFF",
+    "t": {
+      "accent": "#20302A",
+      "box": "#C8553D",
+      "font": "Avenir Next",
+      "label": "Style Bible v6",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-dark",
+      "text": "#FFFFFF",
+      "version": 6,
+    },
+  },
+  {
+    "key": "style_bible|sb-dark|Helvetica Neue|#20302A|#C8553D|#FFFFFF",
+    "t": {
+      "accent": "#20302A",
+      "box": "#C8553D",
+      "font": "Helvetica Neue",
+      "label": "Style Bible v6",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-dark",
+      "text": "#FFFFFF",
+      "version": 6,
+    },
+  },
+  {
+    "key": "style_bible|sb-dark|Futura|#20302A|#C8553D|#FFFFFF",
+    "t": {
+      "accent": "#20302A",
+      "box": "#C8553D",
+      "font": "Futura",
+      "label": "Style Bible v6",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-dark",
+      "text": "#FFFFFF",
+      "version": 6,
+    },
+  },
+  {
+    "key": "style_bible|sb-dark|Georgia|#20302A|#C8553D|#FFFFFF",
+    "t": {
+      "accent": "#20302A",
+      "box": "#C8553D",
+      "font": "Georgia",
+      "label": "Style Bible v6",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-dark",
+      "text": "#FFFFFF",
+      "version": 6,
+    },
+  },
+  {
+    "key": "style_bible|sb-dark|DIN Condensed|#20302A|#C8553D|#FFFFFF",
+    "t": {
+      "accent": "#20302A",
+      "box": "#C8553D",
+      "font": "DIN Condensed",
+      "label": "Style Bible v6",
+      "source": "style_bible",
+      "styleBibleVersionId": "sb-dark",
+      "text": "#FFFFFF",
+      "version": 6,
+    },
+  },
+]
+`;

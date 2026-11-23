@@ -1,0 +1,208 @@
+{
+  "id": "5d9mW5bVlpjgOXFT",
+  "name": "Analyse reference via Creator Studio",
+  "description": "WF-01: Receives a reference id via webhook and runs the Creator Studio Reference Analyst (/api/jobs/reference-analysis). n8n only orchestrates; resulting observations stay pending until the user approves them in the Style Lab.",
+  "active": true,
+  "nodes": [
+    {
+      "id": "2cd6b07f-9cc1-419f-a8d7-a963e6fcf697",
+      "name": "Receive reference id",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        192
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "creator-studio/reference-analysis",
+        "responseMode": "responseNode"
+      },
+      "webhookId": "8654ae3f-e05f-4b31-a291-72f8f0a1e68a"
+    },
+    {
+      "id": "80e0bd62-f0f7-4a40-8f0d-b042cf281567",
+      "name": "Has referenceId?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        224,
+        192
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.body.referenceId }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "be9c29ad-4e92-4247-b992-d62870abb3d0",
+      "name": "Run reference analysis in studio",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        448,
+        96
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:3000/api/jobs/reference-analysis",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ idempotencyKey: $json.body.idempotencyKey || (\"wf01-\" + $json.body.referenceId + \"-\" + $execution.id), payload: { referenceId: $json.body.referenceId } }) }}",
+        "options": {
+          "timeout": 300000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "hOCvdC5mmTRl55Kn",
+          "name": "Studio Job Token"
+        }
+      },
+      "notes": "Idempotent per execution: retries of this execution replay the stored result; a new webhook call analyses again (e.g. after switching from mock to a real provider). App status codes are passed through.",
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "id": "b0afbe36-640d-481a-9321-352b2a4c0e3a",
+      "name": "Reject missing referenceId",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        448,
+        288
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{ \"error\": \"validation_error\", \"message\": \"body.referenceId fehlt (ID einer hochgeladenen Referenz erwartet).\" }",
+        "options": {
+          "responseCode": 400
+        }
+      }
+    },
+    {
+      "id": "02746fdf-6a5e-45f1-99f8-ae062f4ddd0d",
+      "name": "Return studio result",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        672,
+        0
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json.body) }}",
+        "options": {
+          "responseCode": "={{ $json.statusCode }}"
+        }
+      }
+    },
+    {
+      "id": "27cf7e93-2122-4982-9113-5c6045cfbfd4",
+      "name": "Report studio unreachable",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        672,
+        192
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ error: \"upstream_error\", message: \"Creator Studio nicht erreichbar oder Zeitüberschreitung: \" + ($json.error?.message || \"unbekannt\") }) }}",
+        "options": {
+          "responseCode": 502
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Receive reference id": {
+      "main": [
+        [
+          {
+            "node": "Has referenceId?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has referenceId?": {
+      "main": [
+        [
+          {
+            "node": "Run reference analysis in studio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Reject missing referenceId",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run reference analysis in studio": {
+      "main": [
+        [
+          {
+            "node": "Return studio result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Report studio unreachable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": true
+  },
+  "nodeGroups": [],
+  "versionCounter": 1,
+  "sourceWorkflowId": null,
+  "versionMetadata": {
+    "name": "Initial WF-01 via MCP",
+    "description": "Created with 6 nodes: Receive reference id, Has referenceId?, Run reference analysis in studio, Reject missing referenceId, Return studio result and 1 more"
+  }
+}

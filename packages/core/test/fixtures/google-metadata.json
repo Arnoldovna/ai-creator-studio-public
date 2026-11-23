@@ -1,0 +1,608 @@
+)]}'
+{
+ "axisRegistry": [],
+ "familyMetadataList": [
+  {
+   "family": "Anton",
+   "displayName": null,
+   "category": "Sans Serif",
+   "stroke": "Sans Serif",
+   "classifications": [
+    "Display"
+   ],
+   "size": 170812,
+   "subsets": [
+    "menu",
+    "latin",
+    "latin-ext",
+    "vietnamese"
+   ],
+   "fonts": {
+    "400": {
+     "thickness": 7,
+     "slant": 1,
+     "width": 7,
+     "lineHeight": 1.50537109375
+    }
+   },
+   "axes": [],
+   "designers": [
+    "Vernon Adams"
+   ],
+   "lastModified": "2025-09-16",
+   "dateAdded": "2011-02-23",
+   "popularity": 74,
+   "isNoto": false,
+   "isOpenSource": true,
+   "isBrandFont": false
+  },
+  {
+   "family": "Bebas Neue",
+   "displayName": null,
+   "category": "Sans Serif",
+   "stroke": "Sans Serif",
+   "classifications": [
+    "Display"
+   ],
+   "size": 61400,
+   "subsets": [
+    "menu",
+    "latin",
+    "latin-ext"
+   ],
+   "fonts": {
+    "400": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.2
+    }
+   },
+   "axes": [],
+   "designers": [
+    "Ryoichi Tsunekawa"
+   ],
+   "lastModified": "2025-09-16",
+   "dateAdded": "2019-10-16",
+   "popularity": 44,
+   "isNoto": false,
+   "isOpenSource": true,
+   "isBrandFont": false
+  },
+  {
+   "family": "Caveat",
+   "displayName": null,
+   "category": "Handwriting",
+   "stroke": null,
+   "classifications": [
+    "Handwriting"
+   ],
+   "size": 403648,
+   "subsets": [
+    "menu",
+    "cyrillic",
+    "cyrillic-ext",
+    "latin",
+    "latin-ext"
+   ],
+   "fonts": {
+    "400": {
+     "thickness": 3,
+     "slant": 6,
+     "width": 3,
+     "lineHeight": 1.26
+    },
+    "500": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.26
+    },
+    "600": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.26
+    },
+    "700": {
+     "thickness": 4,
+     "slant": 6,
+     "width": 3,
+     "lineHeight": 1.26
+    }
+   },
+   "axes": [
+    {
+     "tag": "wght",
+     "min": 400.0,
+     "max": 700.0,
+     "defaultValue": 400.0
+    }
+   ],
+   "designers": [
+    "Impallari Type"
+   ],
+   "lastModified": "2025-09-04",
+   "dateAdded": "2015-09-23",
+   "popularity": 96,
+   "isNoto": false,
+   "isOpenSource": true,
+   "isBrandFont": false
+  },
+  {
+   "family": "Montserrat",
+   "displayName": null,
+   "category": "Sans Serif",
+   "stroke": "Sans Serif",
+   "classifications": [],
+   "size": 753656,
+   "subsets": [
+    "menu",
+    "cyrillic",
+    "cyrillic-ext",
+    "latin",
+    "latin-ext",
+    "vietnamese"
+   ],
+   "fonts": {
+    "100": {
+     "thickness": 1,
+     "slant": 1,
+     "width": 7,
+     "lineHeight": 1.219
+    },
+    "100i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "200": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "200i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "300": {
+     "thickness": 4,
+     "slant": 1,
+     "width": 8,
+     "lineHeight": 1.219
+    },
+    "300i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "400": {
+     "thickness": 6,
+     "slant": 1,
+     "width": 8,
+     "lineHeight": 1.219
+    },
+    "400i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "500": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "500i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "600": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "600i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "700": {
+     "thickness": 7,
+     "slant": 1,
+     "width": 8,
+     "lineHeight": 1.219
+    },
+    "700i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "800": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "800i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    },
+    "900": {
+     "thickness": 8,
+     "slant": 1,
+     "width": 8,
+     "lineHeight": 1.219
+    },
+    "900i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.219
+    }
+   },
+   "axes": [
+    {
+     "tag": "wght",
+     "min": 100.0,
+     "max": 900.0,
+     "defaultValue": 400.0
+    }
+   ],
+   "designers": [
+    "Julieta Ulanovsky",
+    "Sol Matas",
+    "Juan Pablo del Peral",
+    "Jacques Le Bailly"
+   ],
+   "lastModified": "2025-09-04",
+   "dateAdded": "2011-12-13",
+   "popularity": 7,
+   "isNoto": false,
+   "isOpenSource": true,
+   "isBrandFont": false
+  },
+  {
+   "family": "Playfair Display",
+   "displayName": null,
+   "category": "Serif",
+   "stroke": "Serif",
+   "classifications": [
+    "Display"
+   ],
+   "size": 289706,
+   "subsets": [
+    "menu",
+    "cyrillic",
+    "latin",
+    "latin-ext",
+    "vietnamese"
+   ],
+   "fonts": {
+    "400": {
+     "thickness": 4,
+     "slant": 1,
+     "width": 7,
+     "lineHeight": 1.333
+    },
+    "400i": {
+     "thickness": 4,
+     "slant": 5,
+     "width": 7,
+     "lineHeight": 1.333
+    },
+    "500": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.333
+    },
+    "500i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.333
+    },
+    "600": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.333
+    },
+    "600i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.333
+    },
+    "700": {
+     "thickness": 6,
+     "slant": 1,
+     "width": 7,
+     "lineHeight": 1.333
+    },
+    "700i": {
+     "thickness": 6,
+     "slant": 5,
+     "width": 7,
+     "lineHeight": 1.333
+    },
+    "800": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.333
+    },
+    "800i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.333
+    },
+    "900": {
+     "thickness": 7,
+     "slant": 1,
+     "width": 7,
+     "lineHeight": 1.333
+    },
+    "900i": {
+     "thickness": 7,
+     "slant": 5,
+     "width": 7,
+     "lineHeight": 1.333
+    }
+   },
+   "axes": [
+    {
+     "tag": "wght",
+     "min": 400.0,
+     "max": 900.0,
+     "defaultValue": 400.0
+    }
+   ],
+   "designers": [
+    "Claus Eggers Sørensen"
+   ],
+   "lastModified": "2025-09-11",
+   "dateAdded": "2011-11-16",
+   "popularity": 22,
+   "isNoto": false,
+   "isOpenSource": true,
+   "isBrandFont": false
+  },
+  {
+   "family": "Roboto Mono",
+   "displayName": null,
+   "category": "Monospace",
+   "stroke": null,
+   "classifications": [
+    "Monospace"
+   ],
+   "size": 190246,
+   "subsets": [
+    "menu",
+    "cyrillic",
+    "cyrillic-ext",
+    "greek",
+    "latin",
+    "latin-ext",
+    "vietnamese"
+   ],
+   "fonts": {
+    "100": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "100i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "200": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "200i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "300": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "300i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "400": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "400i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "500": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "500i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "600": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "600i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "700": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    },
+    "700i": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.31884765625
+    }
+   },
+   "axes": [
+    {
+     "tag": "wght",
+     "min": 100.0,
+     "max": 700.0,
+     "defaultValue": 400.0
+    }
+   ],
+   "designers": [
+    "Christian Robertson"
+   ],
+   "lastModified": "2026-05-05",
+   "dateAdded": "2025-05-12",
+   "popularity": 17,
+   "isNoto": false,
+   "isOpenSource": true,
+   "isBrandFont": false
+  },
+  {
+   "family": "Shrikhand",
+   "displayName": null,
+   "category": "Display",
+   "stroke": "Serif",
+   "classifications": [
+    "Display"
+   ],
+   "size": 220804,
+   "subsets": [
+    "menu",
+    "gujarati",
+    "latin",
+    "latin-ext"
+   ],
+   "fonts": {
+    "400": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.458
+    }
+   },
+   "axes": [],
+   "designers": [
+    "Jonny Pinhorn"
+   ],
+   "lastModified": "2025-09-08",
+   "dateAdded": "2016-06-15",
+   "popularity": 557,
+   "isNoto": false,
+   "isOpenSource": true,
+   "isBrandFont": false
+  },
+  {
+   "family": "Noto Color Emoji",
+   "displayName": null,
+   "category": "Sans Serif",
+   "stroke": "Sans Serif",
+   "classifications": [],
+   "size": 25332736,
+   "subsets": [
+    "menu",
+    "emoji"
+   ],
+   "fonts": {
+    "400": {
+     "thickness": null,
+     "slant": null,
+     "width": null,
+     "lineHeight": 1.171875
+    }
+   },
+   "axes": [],
+   "designers": [
+    "Google"
+   ],
+   "lastModified": "2026-10-29",
+   "dateAdded": "2021-02-16",
+   "popularity": 83,
+   "isNoto": true,
+   "isOpenSource": true,
+   "isBrandFont": true
+  },
+  {
+   "family": "Zen Kaku Gothic Ñew",
+   "displayName": null,
+   "category": "Sans Serif",
+   "stroke": "Sans Serif",
+   "classifications": [
+    "Display"
+   ],
+   "size": 170812,
+   "subsets": [
+    "menu",
+    "latin",
+    "latin-ext",
+    "vietnamese"
+   ],
+   "fonts": {
+    "400": {
+     "thickness": 7,
+     "slant": 1,
+     "width": 7,
+     "lineHeight": 1.50537109375
+    }
+   },
+   "axes": [],
+   "designers": [
+    "Vernon Adams"
+   ],
+   "lastModified": "2025-09-16",
+   "dateAdded": "2011-02-23",
+   "popularity": 5,
+   "isNoto": false,
+   "isOpenSource": true,
+   "isBrandFont": false
+  }
+ ],
+ "promotedScript": null
+}

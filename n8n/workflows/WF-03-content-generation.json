@@ -1,0 +1,208 @@
+{
+  "id": "q0lRYQz1uj7rfGGq",
+  "name": "Generate content concepts via Creator Studio",
+  "description": "WF-03: Receives a content brief via webhook and asks the Creator Studio app (/api/jobs/content-generation) for 3 concepts. n8n only orchestrates; agents, routing, budget and idempotency live in the app. Concepts still need user selection in the studio UI.",
+  "active": true,
+  "nodes": [
+    {
+      "id": "ca581efe-0176-4b8b-8919-3bd561db109f",
+      "name": "Receive content brief",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        192
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "creator-studio/content-generation",
+        "responseMode": "responseNode"
+      },
+      "webhookId": "e0f7076e-675a-44f5-8e1a-97c90268e5d7"
+    },
+    {
+      "id": "befda214-9f4b-46d2-93a1-97dc4ad577b2",
+      "name": "Has brief?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        224,
+        192
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.body.brief }}",
+              "rightValue": "",
+              "operator": {
+                "type": "object",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "8706e1fc-a7f5-468e-adf7-d645ee506515",
+      "name": "Run content job in studio",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        448,
+        96
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:3000/api/jobs/content-generation",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ idempotencyKey: $json.body.idempotencyKey || (\"n8n-wf03-exec-\" + $execution.id), payload: { brief: $json.body.brief } }) }}",
+        "options": {
+          "timeout": 300000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "hOCvdC5mmTRl55Kn",
+          "name": "Studio Job Token"
+        }
+      },
+      "notes": "Idempotent: same idempotencyKey replays the stored result instead of re-running (and re-billing) the agent. Status codes from the app (402 budget, 409 running, 4xx input) are passed through.",
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "id": "348ac4dd-ab0a-4cf4-b474-a12c69c48ba4",
+      "name": "Reject missing brief",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        448,
+        288
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{ \"error\": \"validation_error\", \"message\": \"body.brief fehlt (Objekt mit projectId und topic erwartet).\" }",
+        "options": {
+          "responseCode": 400
+        }
+      }
+    },
+    {
+      "id": "fb12d8c6-ccc8-46fe-910f-81e0543a5de9",
+      "name": "Return studio result",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        672,
+        0
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json.body) }}",
+        "options": {
+          "responseCode": "={{ $json.statusCode }}"
+        }
+      }
+    },
+    {
+      "id": "2505a8a3-f3a3-4726-9c74-b56281d358b5",
+      "name": "Report studio unreachable",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        672,
+        192
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ error: \"upstream_error\", message: \"Creator Studio nicht erreichbar oder Zeitüberschreitung: \" + ($json.error?.message || \"unbekannt\") }) }}",
+        "options": {
+          "responseCode": 502
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Receive content brief": {
+      "main": [
+        [
+          {
+            "node": "Has brief?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has brief?": {
+      "main": [
+        [
+          {
+            "node": "Run content job in studio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Reject missing brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run content job in studio": {
+      "main": [
+        [
+          {
+            "node": "Return studio result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Report studio unreachable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": true
+  },
+  "nodeGroups": [],
+  "versionCounter": 1,
+  "sourceWorkflowId": null,
+  "versionMetadata": {
+    "name": "Initial WF-03 via MCP",
+    "description": "Created with 6 nodes: Receive content brief, Has brief?, Run content job in studio, Reject missing brief, Return studio result and 1 more"
+  }
+}
